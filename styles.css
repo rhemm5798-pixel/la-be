@@ -1,0 +1,62 @@
+:root{--hueso:#FBF6F3;--polvo:#F0DCDA;--malva:#B5757F;--osc:#8E5560;--carbon:#2B2326;--oro:#B8935A;--r:18px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:300 1.05rem/1.65 Jost,system-ui,sans-serif;color:var(--carbon);background:var(--hueso)}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.1;font-weight:300}
+h2{font:400 clamp(2.4rem,5vw,3.4rem)/1.1 "Pinyon Script",cursive;color:var(--osc);margin-bottom:1.2rem}
+h3{font-size:1.2rem;font-weight:400}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
+section{padding:4.5rem 1.25rem}
+.rosa{background:var(--polvo)}
+.w{max-width:1040px;margin:auto}
+.btn{display:inline-block;padding:.8rem 1.5rem;margin:0 .5rem .5rem 0;border-radius:999px;background:var(--osc);color:#fff;text-decoration:none;font:500 1rem Jost,sans-serif;border:0;cursor:pointer}
+.btn.alt{background:none;color:var(--osc);box-shadow:inset 0 0 0 1.5px var(--osc)}
+header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 1.25rem;background:rgba(251,246,243,.94);backdrop-filter:blur(6px)}
+header .btn{margin:0;padding:.55rem 1.1rem;font-size:.95rem}
+.logo{font:400 1.8rem "Pinyon Script",cursive;color:var(--osc);text-decoration:none}
+nav{display:none;gap:1.4rem}nav a{text-decoration:none}
+@media(min-width:900px){nav{display:flex}}
+.hero{display:grid;gap:2.5rem;align-items:center;max-width:1040px;margin:auto;padding:3rem 1.25rem 4.5rem}
+@media(min-width:800px){.hero{grid-template-columns:1.1fr .9fr}}
+.hero p{margin:1.2rem 0 1.8rem;max-width:34rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;list-style:none;padding:0;margin-top:1.6rem;color:var(--osc)}
+.arco{aspect-ratio:3/4;border-radius:999px 999px 0 0;overflow:hidden}
+.ph{width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(160deg,var(--polvo),#E2B9BB);color:var(--osc);font-size:.9rem}
+img{width:100%;height:100%;object-fit:cover;display:block}
+.srv a{display:grid;grid-template-columns:1fr auto;gap:.2rem 1.5rem;padding:1.4rem 0;border-top:1px solid #E3CFCB;text-decoration:none}
+.srv a:last-child{border-bottom:1px solid #E3CFCB}
+.srv h3{font-size:1.5rem}.srv span{color:var(--osc);align-self:center}.srv p{grid-column:1/-1}
+.pk{display:grid;gap:1.2rem}
+@media(min-width:800px){.pk{grid-template-columns:repeat(3,1fr)}}
+.pk article{padding:1.8rem;border-radius:var(--r);background:var(--hueso)}
+.pk .top{background:var(--osc);color:#fff}.pk .top .btn{background:#fff;color:var(--osc)}
+.pk b{display:block;font-size:1.4rem;font-weight:400;margin:.4rem 0}
+.pk ul{padding-left:1.1rem;margin:.8rem 0 1.4rem}
+.nota{margin-top:1.6rem}
+.f{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.4rem}
+.f button{font:inherit;padding:.4rem 1rem;border-radius:999px;border:1.5px solid var(--osc);background:none;color:var(--osc);cursor:pointer}
+.f button[aria-pressed=true]{background:var(--osc);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem}
+@media(min-width:800px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal figure{aspect-ratio:4/5;border-radius:10px;overflow:hidden}
+.gal figure[hidden]{display:none}
+ol{list-style:none;padding:0;display:grid;gap:1.4rem;counter-reset:s}
+@media(min-width:800px){ol{grid-template-columns:repeat(4,1fr)}}
+ol li{counter-increment:s;position:relative;padding-left:3rem}
+ol li::before{content:counter(s);position:absolute;left:0;top:-.5rem;font:400 2.6rem "Pinyon Script",cursive;color:var(--oro)}
+.dos{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:800px){.dos{grid-template-columns:1fr 1fr}}
+.dos p{margin-bottom:1rem}
+.op{display:grid;gap:1.4rem}
+@media(min-width:800px){.op{grid-template-columns:repeat(3,1fr)}}
+blockquote{padding-left:1.2rem;border-left:3px solid var(--malva)}
+cite{display:block;margin-top:.5rem;color:var(--osc);font-style:normal}
+details{border-top:1px solid #E3CFCB;padding:1rem 0}
+summary{cursor:pointer;font-weight:500}details p{margin-top:.6rem}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.3rem;font-weight:400}
+input,select,textarea{font:inherit;padding:.7rem .9rem;border:1.5px solid #D9B9BA;border-radius:10px;background:#fff;color:var(--carbon)}
+footer{padding:2.5rem 1.25rem;text-align:center}
+footer p{margin:.3rem 0}
